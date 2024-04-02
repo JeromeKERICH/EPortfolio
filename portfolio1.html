@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>My Portfolio</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    <style>
+        /* Inline styles for demonstration purposes only */
+        /* Mobile-first approach */
+        @media only screen and (max-width: 600px) {
+            nav ul {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            nav li {
+                margin: 10px 0;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <h1>My Portfolio</h1>
+    </header>
+    <nav>
+        <li><a href="#" onclick="toggleContent('about')">About Me</a></li>
+            <li><a href="#" onclick="toggleContent('projects')">Projects</a></li>
+            <li><a href="#" onclick="toggleContent('skills')">Skills</a></li>
+            <li><a href="#" onclick="toggleContent('contacts')">Contacts</a></li>
+    </nav>
+
+    <main>
+        <section id="about">
+            <div class="image-container">
+            <h2>About Me</h2>
+            <p>Hello there,<br>Welcome to my portfolio website. My name is Emmanuel Kerich,<br>I am doing Software engineering at PLP Cohort 2024. Please come, let us connect</p>
+        </section>
+        <section id="projects">
+            <h2>Ongoing Projects</h2>
+            <ol>
+                <li>Software Engineering</li>
+                <li>Web development project</li>
+                <li>Database management system</li>
+            </ol>
+        </section>
+        <section id="skills">
+            <h2>My Skills</h2>
+            <ul>
+                <li>Front-End languages: HTML, CSS, Javascript, Angular</li>
+                <li>Back-End languages: Python, PHP, Mysql</li>
+                <li>Data Analytics</li>
+                <li>Dart & Flutter</li>
+            </ul>
+        </section>
+        <section id="contact">
+            <h2>Get in touch</h2>
+            <p>Email me at;</p>
+            <li>Email: <a href="mailto:kericemman@gmail.com">kericemman@gmail.com</a></li>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; 2024 Emmanuel Kerich All rights reserved</p>
+    </footer>
+    
+    <script>
+        function toggleContent(id) {
+            var contents = document.querySelectorAll('.content');
+            for (var i = 0; i < contents.length; i++) {
+                if (contents[i].id === id) {
+                    contents[i].style.display = 'block';
+                } else {
+                    contents[i].style.display = 'none';
+                }
+            }
+        }
+    </script>
+
+</body>
+
+</html>
